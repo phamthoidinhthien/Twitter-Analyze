@@ -1,4 +1,5 @@
-#These code will export a wordcloud base on input hashtag, simply change the hashtag word and number of Tweets you want to extract
+#These code will export a wordcloud base on input hashtag, simply change the hashtag word 
+# and number of Tweets you want to extract
 #Require the following library: wordcloud, tm, twitteR, ROAuth
 #You need to create application access code and token in Twitter
 #Use this command to get authorize: setup_twitter_oauth(api_key,api_secret,access_token,access_token_secret)
