@@ -1,7 +1,7 @@
-#These code will export a wordcloud base on input hashtag, simply change the hashtag word 
-# and number of Tweets you want to extract
+#This code will create a wordcloud which is based on the input hashtag, simply change the hashtag word in Input section
+#NoTweets is number of tweets you want to count.
 #Require the following library: wordcloud, tm, twitteR, ROAuth
-#You need to create application access code and token in Twitter
+#You need to create an application which will give you authorization to extract data. Copy the key and access tokens and paste to the code below
 #Use this command to get authorize: setup_twitter_oauth(api_key,api_secret,access_token,access_token_secret)
 
 #Input
@@ -29,7 +29,7 @@ text = gsub(" $","",text)
 #convert to corpus
 corpus = Corpus(VectorSource(text))
 
-#remove stopword and hastag word
+#remove stopword and hashtag word
 corpus = tm_map(corpus,removeWords,c(substring(hashtag,2),stopwords("english")))
 
 #Output Wordcloud
